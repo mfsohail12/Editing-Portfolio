@@ -1,3 +1,17 @@
+@media screen and (max-width: 600px) {
+    .name-header {
+        font-size: 2rem !important;
+    }
+
+    .nav-header {
+        font-size: 1.2em !important;
+    }
+
+    .nav-link-header {
+        font-size: 1.2em !important;
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     * {
       scroll-behavior: smooth;
@@ -6,35 +20,30 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-family: 'Times New Roman', Times, serif; */
 }
 
 .navbar {
     background-color: black;
-    color: white;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
     top: 0;
     width: 100vw;
-    height: 65px;
-    max-height: 80px;
+    height: 4.063rem;
     z-index: 1;
     border-bottom: 2px solid white;
-    overflow: scroll;
-
 }
 
 .nav-header {
-    padding: 20px 0px 20px 20px;
-    margin: 0;
-    grid-area: 1 / 1 / 2 / 2
+    margin: 1.25rem 0 0 1.25rem;
+    font-size: 1.5em;
 }
 
 .nav-header-anchor {
@@ -42,34 +51,21 @@ body {
     text-decoration: none;
 }
 
-.nav-link {
+.nav-link-header {
+    margin: 1.25rem 1.25rem 0 0;
+    font-size: 1.5em;
+}
+
+.nav-link-anchor {
     color: white;
     text-decoration: none;
 }
 
-.nav-link h2 {
-    padding: 5px;
-}
-
-.nav-link h2:hover { /* !!!give text box shadow on hover */
+.nav-link-anchor h2:hover { /* !!!give text box shadow on hover */
     position: relative;
     right: 4px;
     bottom: 4px;
     text-shadow: 4px 4px #636363;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-    grid-area: 1 / 2 / 2 / 3;
-    padding-right: 20px;
-    height: 65px;
-}
-
-main {
-    margin-top: 65px;
 }
 
 .about-me {
@@ -78,7 +74,6 @@ main {
     background-size: cover;
     color: #fff9e6;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -87,19 +82,35 @@ main {
     filter: grayscale(100%);
 }
 
+.about-me-flex {
+    display: flex;
+    flex-direction: column;
+}
+
 .name-header {
-    font-size: 70px;
-    margin: -10px;
+    margin: 0;
+    font-size: 4.375rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px 5px 10px;
 }
 
 .occupation-description {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
-.inline-flex {
-    display: flex;
-    justify-content: space-between;
-    width: 570px;
+i[id='envelope-icon'] {
+    font-size: 23px;
+}
+
+i[id='youtube-icon'] {
+    font-size: 25px;
+}
+
+.icon-anchor {
+    color: white;
+    font-size: 1.563rem;
 }
 
 .contact-icons {
@@ -107,17 +118,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
 }
 
-.icon-anchor {
-    color: white;
-    font-size: 25px;
-}
-
-i.fa-envelope {
-    width: 10px;
-    height: 10px;    
+.space-between-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .projects {
@@ -128,20 +135,20 @@ i.fa-envelope {
 
 .projects-header {
     color: white;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-left: 1.7rem;
     margin-top: 5px;
     border-bottom: 2px solid white;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     display: inline-block;
 }
 
 .videos {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
     gap: 1.5rem;
-    margin: 1rem 0.5rem 1rem 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
     justify-content: center;
 }
 
@@ -149,7 +156,7 @@ i.fa-envelope {
     padding: 20px;
     text-align: left;
     grid-row: span 1;
-    grid-column: span 2;
+    grid-column: span 1;
     
 }
 
@@ -159,7 +166,7 @@ i.fa-envelope {
 
 .video-description {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     letter-spacing: 0.5px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
