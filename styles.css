@@ -24,6 +24,7 @@ body {
     top: 0;
     width: 100vw;
     height: 65px;
+    max-height: 80px;
     z-index: 1;
     border-bottom: 2px solid white;
 
